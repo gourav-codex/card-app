@@ -1,0 +1,154 @@
+* {
+  margin: 10;
+  padding: 0;
+  font-family: Aclonica;
+  box-sizing: border-box;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #b18cec;
+  border-bottom: 1px solid #aaaee0;
+}
+
+.navbar-left h1 {
+  margin: 0;
+  margin-left: 20px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+/* tabs */
+.tabs {
+  margin: 20px 0 20px 20px;
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+}
+
+.tabs button {
+  padding: 10px;
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background-color: #ccc;
+}
+
+
+.search-bar {
+  margin: 10px;
+  font-size: 15px;
+  padding: 4px 8px;
+  width: 300px;
+  border-right: 1px solid black;
+  overflow: hidden;
+  animation: animate 3s linear infinite;
+  background-color: #e5d9f7;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+
+@keyframes animate
+{
+  0%,10%,100%
+  {
+    width:0;
+  }
+  70%,90%
+  {
+    width:20%;
+  }
+}
+
+/* card */
+.card-list {
+  margin: auto 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #d79cfd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+
+.card-type {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.type-1 {
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fcfc9f;
+  color: #bb6b03;
+}
+
+.type-2 {
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #a6dff0;
+  color: #1f7ea0;
+}
+.progress-bar {
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background-color: #a6dff0;
+  border-radius: 4px;
+}
+
+
+/*tablet view */
+@media (max-width: 1024px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*mobile view */
+@media (max-width: 768px) {
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}
